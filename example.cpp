@@ -37,7 +37,7 @@ int main()
         instance;
     
     hbuf.start = msg;
-    hbuf.length = strlen(msg);
+    hbuf.length = sizeof(msg);
 
     std::cout << "commencing ipConnect test" << std::endl;
     if(instance.ipConnect("34.223.124.45", 80) == false) // connect to neverssl.com (a non https website for testing purposes)
