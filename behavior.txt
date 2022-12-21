@@ -1,0 +1,21 @@
+//  Made by Troy A. Hamilton (12/18/2022)
+//  No guarantees offered. Constructive comments to wmmmwd@gmail.com
+
+class TtcpCient
+
+This class will do a few tasks.
+
+struct hbs //header'd byte sequence
+{
+    int length;
+    char *start;
+};
+
+TtcpClient client;
+these calls return false on failure and true on success
+
+client.ipConnect("192.168.1.183", 1111); takes presentation char* format ip address and port number
+client.sendData(hbuf); // hbuf is a struct hbs. will send the buffer specified in hbuf
+client.dynamicReceive(hbuf, 8192); will receive 8192 bytes into a dynamically allocated buffer, and return info to hbuf,
+dynamically allocated buffer is capped at a max of 8192 bytes in this scenario.
+
